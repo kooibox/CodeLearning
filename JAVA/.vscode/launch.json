@@ -1,0 +1,91 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Person$Test",
+            "request": "launch",
+            "mainClass": "Person$Test",
+            "projectName": "java_5aa62aab"
+        },
+        {
+            "type": "java",
+            "name": "GuessNumber",
+            "request": "launch",
+            "mainClass": "GuessNumber",
+            "projectName": "java_5aa62aab"
+        },
+        {
+            "type": "java",
+            "name": "AvgNumber",
+            "request": "launch",
+            "mainClass": "AvgNumber",
+            "projectName": "java_5aa62aab"
+        },
+        {
+            "type": "java",
+            "name": "CountNumber",
+            "request": "launch",
+            "mainClass": "CountNumber",
+            "projectName": "java_5aa62aab"
+        },
+        {
+            "type": "java",
+            "name": "Num",
+            "request": "launch",
+            "mainClass": "Num",
+            "projectName": "java_5aa62aab"
+        },
+        {
+            "type": "java",
+            "name": "pay",
+            "request": "launch",
+            "mainClass": "pay",
+            "projectName": "java_5aa62aab"
+        },
+        {
+            "type": "java",
+            "name": "Age",
+            "request": "launch",
+            "mainClass": "Age",
+            "projectName": "java_5aa62aab"
+        },
+        {
+            "type": "java",
+            "name": "Change",
+            "request": "launch",
+            "mainClass": "Change",
+            "projectName": "java_5aa62aab"
+        },
+        {
+            "type": "java",
+            "name": "hello",
+            "request": "launch",
+            "mainClass": "hello",
+            "projectName": "java_5aa62aab"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Demo",
+            "request": "launch",
+            "mainClass": "Demo",
+            "projectName": "java_5aa62aab"
+        },
+        {
+            "type": "java",
+            "name": "input",
+            "request": "launch",
+            "mainClass": "input",
+            "projectName": "java_5aa62aab"
+        }
+    ]
+}
