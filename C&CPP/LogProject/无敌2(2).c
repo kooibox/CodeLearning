@@ -2,44 +2,44 @@
 #include <stdio.h>
 
 /* 
-  ¶¨ÒåÃ¿ÌõÈÕÖ¾½á¹¹Ìå,ÔªËØ¿Õ¼ä²»¹»»á³öÏÖºÏ²¢µÄÎÊÌâ,µ¼ÖÂÊý×éÔ½½ç
+  ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½á¹¹ï¿½ï¿½,Ôªï¿½Ø¿Õ¼ä²»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÖºÏ²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô½ï¿½ï¿½
 */ 
-struct log_Item//(¶¨ÒåÒ»¸ö½á¹¹ÌåÓÃÀ´´æ´¢ÈÕÖ¾ÖÐµÄÊý¾Ý)
+struct log_Item//(ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½á¹¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ´¢ï¿½ï¿½Ö¾ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½)
 {
-    char Method[10];//ÇëÇó·½Ê½
-    char Client_IP[20];//¿Í»§¶ËIP
-    char Protocol[15];//Ð­Òé
-    char Time[25];//Ê±¼äyyyy-mm-dd hh:mm:ss
-    char URL[150];//·ÃÎÊµØÖ·
-    char Resource[150];//·ÃÎÊÒ³Ãæ 
-    char Content[250];//²ÎÊýÁÐ±í 
-    char Status[10];//×´Ì¬Âë
-    char Client_Browser[400];//ä¯ÀÀÆ÷ÐÅÏ¢
+    char [10];//ï¿½ï¿½ï¿½ï¿½Ê½
+    char Client_IP[20];//ï¿½Í»ï¿½ï¿½ï¿½IP
+    char Protocol[15];//Ð­ï¿½ï¿½
+    char Time[25];//Ê±ï¿½ï¿½yyyy-mm-dd hh:mm:ss
+    char URL[150];//ï¿½ï¿½ï¿½Êµï¿½Ö·
+    char Resource[150];//ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ 
+    char Content[250];//ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ 
+    char Status[10];//×´Ì¬ï¿½ï¿½
+    char Client_Browser[400];//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 };
 
 /* 
-  ÓÃÓÚ¸³ÖµÈÕÖ¾½á¹¹ÌåµÄµÚiÏîÔªËØÎª×Ö·û´® src  
+  ï¿½ï¿½ï¿½Ú¸ï¿½Öµï¿½ï¿½Ö¾ï¿½á¹¹ï¿½ï¿½Äµï¿½iï¿½ï¿½Ôªï¿½ï¿½Îªï¿½Ö·ï¿½ï¿½ï¿½ src  
 */ 
 void construct_Log(struct log_Item * item, int i, char *src)
 {
     switch(i){
-    case 0: strcpy(item->Method, src);break;//(1->ÊÇÓÃÓÚÖ¸Ïò½á¹¹Ìå×ÓÊý¾ÝµÄÖ¸Õë£¬ÓÃÀ´È¡×ÓÊý¾Ý)
-    case 1: strcpy(item->Client_IP, src);break;//(2È¡³öitemËùÖ¸ÏòµÄ½á¹¹ÌåÖÐ°üº¬µÄÊý¾ÝÏî Client_IP) 
-    case 2: strcpy(item->Protocol, src);break;//(3ÔËÓÃstrcpyº¯Êý½«srcÊý×éÖÐµÄ×Ö·û´®¸´ÖÆµ½item->Client_IPÖÐ) 
+    case 0: strcpy(item->Method, src);break;//(1->ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½á¹¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ýµï¿½Ö¸ï¿½ë£¬ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
+    case 1: strcpy(item->Client_IP, src);break;//(2È¡ï¿½ï¿½itemï¿½ï¿½Ö¸ï¿½ï¿½Ä½á¹¹ï¿½ï¿½ï¿½Ð°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Client_IP) 
+    case 2: strcpy(item->Protocol, src);break;//(3ï¿½ï¿½ï¿½ï¿½strcpyï¿½ï¿½ï¿½ï¿½ï¿½ï¿½srcï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½item->Client_IPï¿½ï¿½) 
     case 3: strcpy(item->Time, src);break;
     case 4: strcpy(item->URL, src);break;
     case 5: strcpy(item->Resource, src);break;
     case 6: strcpy(item->Content, src);break;
     case 7: strcpy(item->Status, src);break;
     case 8: strcpy(item->Client_Browser, src);break;
-    default : ;//µ±²»Ö´ÐÐÊ±Ö´ÐÐ 
+    default : ;//ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½Ê±Ö´ï¿½ï¿½ 
     }
 }
 
 /* 
-  ´òÓ¡ÈÕÖ¾½á¹¹ÌåÊý×éµÄÈ«ÌåÔªËØ
+  ï¿½ï¿½Ó¡ï¿½ï¿½Ö¾ï¿½á¹¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È«ï¿½ï¿½Ôªï¿½ï¿½
 */ 
-void Print_logData(struct log_Item your[],int ietm_num)//µ÷ÓÃº¯Êý Print_logData½«½á¹¹ÌåÊý×é´òÓ¡ 
+void Print_logData(struct log_Item your[],int ietm_num)//ï¿½ï¿½ï¿½Ãºï¿½ï¿½ï¿½ Print_logDataï¿½ï¿½ï¿½á¹¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¡ 
 {
     int i;
     for(i = 0;i<ietm_num;i++)
@@ -49,8 +49,8 @@ void Print_logData(struct log_Item your[],int ietm_num)//µ÷ÓÃº¯Êý Print_logData½
 }
 
 /* 
-  ¶ÁÈÕÖ¾ÎÄ¼þfilename²¢¸³Öµµ½½á¹¹ÌåÊý×éyour
-  ·µ»ØÈÕÖ¾ÌõÄ¿Êýnum 
+  ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½Ä¼ï¿½filenameï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½á¹¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½your
+  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½Ä¿ï¿½ï¿½num 
 */ 
 int Read_logFile(char *filename,struct log_Item *your)
 {
@@ -80,40 +80,40 @@ int Read_logFile(char *filename,struct log_Item *your)
 }
 
  
- // Í³¼ÆÈÕÖ¾½á¹¹ÌåÊý×éMethodÔªËØ[GET]µÄ¸öÊý 
+ // Í³ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½á¹¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½MethodÔªï¿½ï¿½[GET]ï¿½Ä¸ï¿½ï¿½ï¿½ 
  
-int static_get(struct log_Item your[], int log_item)//ÓÃ×Ô¶¨Òåº¯Êýstatic_getÍ³¼Æ[GET]¸öÊý 
+int static_get(struct log_Item your[], int log_item)//ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½åº¯ï¿½ï¿½static_getÍ³ï¿½ï¿½[GET]ï¿½ï¿½ï¿½ï¿½ 
 {
     int get_num = 0;
     int i;
     for (i = 0; i < log_item; i++)
     {   
-        if ( strcmp( your[i].Method, "[GET]") == 0 ) //×Ö·û´®ÏàµÈ
+        if ( strcmp( your[i].Method, "[GET]") == 0 ) //ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             get_num ++;
     }
-    return get_num;//½«µÃµ½µÄ[GET]µÄÊýÁ¿·µ»¹¸øÖ÷º¯Êý 
+    return get_num;//ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½[GET]ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
 }
-void static_wudi(int *chder,char *Status,int *a)//×Ô¶¨ÒåÒ»¸öº¯Êýstatic_wudiÓÃÀ´±È½ÏÊý×éÖÐ×´Ì¬ÂëºÍËùÓÐ×´Ì¬Âë 
+void static_wudi(int *chder,char *Status,int *a)//ï¿½Ô¶ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½static_wudiï¿½ï¿½ï¿½ï¿½ï¿½È½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½ 
 {
 	int i=0;
-	int b=(*(Status+1)-'0')*100+(*(Status+2)-'0')*10+(*(Status+3)-'0')*1;//°ÑStatusÖÐµÄÄÚÈÝ¸ÄÎªintÐÍ 
-	for(i=0;i<57;i++)//ÔËÓÃÒ»¸öforÑ­»·½«ËùÓÐ×´Ì¬ÂëÓëÊý×éÖÓ×´Ì¬ÂëÒ»Ò»½øÐÐ±È¶Ô 
+	int b=(*(Status+1)-'0')*100+(*(Status+2)-'0')*10+(*(Status+3)-'0')*1;//ï¿½ï¿½Statusï¿½Ðµï¿½ï¿½ï¿½ï¿½Ý¸ï¿½Îªintï¿½ï¿½ 
+	for(i=0;i<57;i++)//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½forÑ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½Ò»Ò»ï¿½ï¿½ï¿½Ð±È¶ï¿½ 
 	{
 	if(b==chder[i])
-	a[i]++;//½«»ñµÃµÄ½á¹û´æÔÚÁíÒ»¸öÊý×éÖÐÓÃÒÔÍ³¼Æ¸ö¸ö×´Ì¬Âë³öÏÖµÄ´ÎÊý 
+	a[i]++;//ï¿½ï¿½ï¿½ï¿½ÃµÄ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í³ï¿½Æ¸ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½ÖµÄ´ï¿½ï¿½ï¿½ 
 	}
 }
-int wowudi(char*hang,char*shou)//¶¨ÒåÒ»¸öº¯ÊýwowudiÓÃhang´ú±íÃ¿ÐÐµÄÊý¾ÝÓÃshou½ÓÊÕÊý¾Ý 
+int wowudi(char*hang,char*shou)//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½wowudiï¿½ï¿½hangï¿½ï¿½ï¿½ï¿½Ã¿ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½shouï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
 {
 	int i=0;
-	char*poi=strstr(hang,"password=");//ÀûÓÃº¯Êýstrstr¶Ô±ÈÃ¿ÐÐµÄÊý¾ÝÖÐÊÇ·ñÓÐ¡°password=¡± 
+	char*poi=strstr(hang,"password=");//ï¿½ï¿½ï¿½Ãºï¿½ï¿½ï¿½strstrï¿½Ô±ï¿½Ã¿ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ð¡ï¿½password=ï¿½ï¿½ 
 	if(poi==NULL)
 	{
 		*shou='\0';
 		return 0;
 	}
-	poi+=9;//Èç¹ûÓÐÓÃshou½ÓÊÜÊý¾Ý£¬½ÓÊÜµÄÎªpoi+=9µÄÊý¾Ý¼°¡°password=¡±µÄ³¤¶È£¬¼´´Ópassword=ºóÃæ¿ªÊ¼¼ÍÂ¼Êý¾Ý 
-	while(*poi!=']'&&*poi!='&')//ÓÃwhileÑ­»·½«Êý¾Ý´æÈëshouÖÐ 
+	poi+=9;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½shouï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½ï¿½Üµï¿½Îªpoi+=9ï¿½ï¿½ï¿½ï¿½ï¿½Ý¼ï¿½ï¿½ï¿½password=ï¿½ï¿½ï¿½Ä³ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½password=ï¿½ï¿½ï¿½æ¿ªÊ¼ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ 
+	while(*poi!=']'&&*poi!='&')//ï¿½ï¿½whileÑ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý´ï¿½ï¿½ï¿½shouï¿½ï¿½ 
 	{
 		shou[i]=*poi;
 		i++ ;
@@ -122,7 +122,7 @@ int wowudi(char*hang,char*shou)//¶¨ÒåÒ»¸öº¯ÊýwowudiÓÃhang´ú±íÃ¿ÐÐµÄÊý¾ÝÓÃshou½ÓÊ
 	shou[i] = '\0' ;
 	return 1;
 }
-int niwudi(char*hang,char*shou)//Í¬Àí £º¶¨ÒåÒ»¸öº¯Êýniwudi ÓÃÊµÏÖÓëº¯ÊýwowudiÍ¬ÑùµÄ¹¦ÄÜ
+int niwudi(char*hang,char*shou)//Í¬ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½niwudi ï¿½ï¿½Êµï¿½ï¿½ï¿½ëº¯ï¿½ï¿½wowudiÍ¬ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½
 {   
 	int i=0;
 	char*poi=strstr(hang,"passwd=");
@@ -141,7 +141,7 @@ int niwudi(char*hang,char*shou)//Í¬Àí £º¶¨ÒåÒ»¸öº¯Êýniwudi ÓÃÊµÏÖÓëº¯ÊýwowudiÍ¬Ñ
 	shou[i] = '\0' ;
 	return 1;
 }
-int time(struct log_Item your[])//Ê±¼ä 
+int time(struct log_Item your[])//Ê±ï¿½ï¿½ 
 {     
  int log_num;
         log_num = Read_logFile("1access.log",your); 
@@ -152,11 +152,11 @@ int time(struct log_Item your[])//Ê±¼ä
   getchar(); 
   char s_time[255];
   char e_time[255];
-  printf("ÇëÊäÈë¿ªÊ¼Ê±¼ä ([yyyy-mm-dd hh:mm:ss]): ");
+  printf("ï¿½ï¿½ï¿½ï¿½ï¿½ë¿ªÊ¼Ê±ï¿½ï¿½ ([yyyy-mm-dd hh:mm:ss]): ");
   gets(s_time);
-  printf("ÇëÊäÈë½áÊøÊ±¼ä ([yyyy-mm-dd hh:mm:ss]): ");
+  printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ ([yyyy-mm-dd hh:mm:ss]): ");
   gets(e_time);
-  printf("ÔÚ´ËÇø¼äµÄÊý¾ÝÓÐ\n");
+  printf("ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
   for(i=0;i<log_num;i++){
   a=strcmp(s_time,your[i].Time);
   b=strcmp(e_time,your[i].Time);
@@ -175,27 +175,27 @@ int main()
 	struct log_Item your[1000];
 	int log_num;
 	log_num = Read_logFile("1access.log", your);
-	while (1)//Ö÷½çÃæ£º¼´Ä¿Â¼ 
+	while (1)//ï¿½ï¿½ï¿½ï¿½ï¿½æ£ºï¿½ï¿½Ä¿Â¼ 
   {
-  printf("----------------------ÈÕÖ¾·ÖÎö---------------------\n");
-  printf("1=Êä³öGETÇëÇóËùÕ¼±ÈÀý\n");
-  printf("2=·ÖÎö¸÷·ÃÎÊ×´Ì¬ÂëµÄ±ÈÂÊ\n");
-  printf("3=·ÖÎö·ÃÎÊ×î¶àµÄ¿Í»§IP\n");
-  printf("4=·ÖÎö³£ÓÃÃÜÂëÒÔ³öÏÖ´ÎÊý\n");
-  printf("5=ÊäÈëÊ±¼ä¶Î²¢Êä³öÔÚÇø¼äÄÚµÄÈÕÖ¾µ½ÎÄ¼þ\n");
-  printf("6=ÍË³ö³ÌÐò\n");
-  printf("ÇëÊäÈëÄúµÄÑ¡Ôñ:\n");
+  printf("----------------------ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½---------------------\n");
+  printf("1=ï¿½ï¿½ï¿½GETï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¼ï¿½ï¿½ï¿½ï¿½\n");
+  printf("2=ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½Ä±ï¿½ï¿½ï¿½\n");
+  printf("3=ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿Í»ï¿½IP\n");
+  printf("4=ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô³ï¿½ï¿½Ö´ï¿½ï¿½ï¿½\n");
+  printf("5=ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Î²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½Ä¼ï¿½\n");
+  printf("6=ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½\n");
+  printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½:\n");
    int n; scanf("%d", &n);
   if (n>7 || n<1)
    {
-   printf("ÎÞÐ§Ö¸Áî\n");
+   printf("ï¿½ï¿½Ð§Ö¸ï¿½ï¿½\n");
    }
    if(n == 1)
     {
     int get_num;
-   // Print_logData(your,log_num);//Êä³öËùÓÐµÄÊý¾ÝÄÚÈÝ 
+   // Print_logData(your,log_num);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
     get_num = static_get(your,log_num);
-    printf("\n[GET] number =%d  ""GETÀàÐÍÇëÇóËùÕ¼µÄ±ÈÀý:%.2lf%%\n",get_num,(float)get_num/log_num*100);
+    printf("\n[GET] number =%d  ""GETï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¼ï¿½Ä±ï¿½ï¿½ï¿½:%.2lf%%\n",get_num,(float)get_num/log_num*100);
 	}
 	 if(n == 2)
 	 {
@@ -212,18 +212,18 @@ int main()
 		{
 			continue;
 		} 
-		printf("×´Ì¬ÂëÎª%d£¬·ÃÎÊ´ÎÊýÎª%d£¬ËùÕ¼±ÈÀýÎª%.2lf%%\n", chder[i], a[i], (float)a[i]/log_num*100);
+		printf("×´Ì¬ï¿½ï¿½Îª%dï¿½ï¿½ï¿½ï¿½ï¿½Ê´ï¿½ï¿½ï¿½Îª%dï¿½ï¿½ï¿½ï¿½Õ¼ï¿½ï¿½ï¿½ï¿½Îª%.2lf%%\n", chder[i], a[i], (float)a[i]/log_num*100);
 	}	
 	 }
 	 if(n == 3)
 	 {
-	 	//  ·ÖÎö·ÃÎÊ×î¶àµÄ¿Í»§IPµØÖ·£¬²¢Í³¼ÆÆä·ÃÎÊ´ÎÊý
-	int max = 0;	//ÓÃÀ´´æ´¢×î¶à´ÎÊý³ö
-	int index = 0;//ÓÃÀ´´æ´¢ÏÖ´ÎÊý×î¶àµÄÄÇ¸ö×Ö·û´®µÄË÷Òý
+	 	//  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿Í»ï¿½IPï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Í³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê´ï¿½ï¿½ï¿½
+	int max = 0;	//ï¿½ï¿½ï¿½ï¿½ï¿½æ´¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	int index = 0;//ï¿½ï¿½ï¿½ï¿½ï¿½æ´¢ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¸ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	int i=0;
 	int j=0;
-	char* fstr;//ÓÃÀ´ÔÝÊ±Ö¸ÏòÏÂÃæÎÒÃÇÒªÓëÆäËüÊý×éÔªËØ½øÐÐ±È½ÏµÄ×Ö·û´®
-	int temp = 0;	//ÓÃÀ´´æ´¢*fstr×Ö·û´®³öÏÖµÄ´ÎÊý
+	char* fstr;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½Ø½ï¿½ï¿½Ð±È½Ïµï¿½ï¿½Ö·ï¿½ï¿½ï¿½
+	int temp = 0;	//ï¿½ï¿½ï¿½ï¿½ï¿½æ´¢*fstrï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÖµÄ´ï¿½ï¿½ï¿½
 	for(i=0; i<log_num; i++)
 	{
 		fstr = your[i].Client_IP;
@@ -239,7 +239,7 @@ int main()
 			}
 			temp = 0;
 	}
-	printf("³öÏÖ´ÎÊý×î¶àµÄ¿Í»§ipµØÖ·£º%s ·ÃÎÊ´ÎÊý %d ´Î\n", your[index].Client_IP,max);
+	printf("ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿Í»ï¿½ipï¿½ï¿½Ö·ï¿½ï¿½%s ï¿½ï¿½ï¿½Ê´ï¿½ï¿½ï¿½ %d ï¿½ï¿½\n", your[index].Client_IP,max);
      }
     
 if(n == 4)
@@ -252,8 +252,8 @@ if(n == 4)
     int h;
     int t=0;
     char *fst;
-    int m = 0;	//ÓÃÀ´´æ´¢×î¶à´ÎÊý³ö
-	int ind = 0;	//ÓÃÀ´´æ´¢ÏÖ´ÎÊý×î¶àµÄÄÇ¸ö×Ö·û´®µÄË÷Òý
+    int m = 0;	//ï¿½ï¿½ï¿½ï¿½ï¿½æ´¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	int ind = 0;	//ï¿½ï¿½ï¿½ï¿½ï¿½æ´¢ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¸ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 for(i=0,j=0;i<log_num; i++) {
 		h=wowudi(your[i].Content,mama[j]) ;
 		if(h!= 0) {
@@ -280,7 +280,7 @@ for(i=0; i<g; i++){
 			}
 			t= 0;
 	}
-	printf("³öÏÖ´ÎÊý×î¶àÃÜÂë£º%s ·ÃÎÊ´ÎÊý %d ´Î\n", mama[ind],m);
+	printf("ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£º%s ï¿½ï¿½ï¿½Ê´ï¿½ï¿½ï¿½ %d ï¿½ï¿½\n", mama[ind],m);
 }
     
 if(n==5)
