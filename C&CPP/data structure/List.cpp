@@ -2,6 +2,7 @@
 #include<stdlib.h>
 #define InitSize 10
 
+
 typedef struct//定义一个顺序表结构
 {
 	int length;//长度

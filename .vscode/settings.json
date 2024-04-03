@@ -62,5 +62,6 @@
   },
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "aiXcoder.showTrayIcon": true,
-  "git.allowForcePush": false
+  "git.allowForcePush": false,
+  "C_Cpp.errorSquiggles": "disabled"
 }
