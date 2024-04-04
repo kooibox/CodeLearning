@@ -63,5 +63,11 @@
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "aiXcoder.showTrayIcon": true,
   "git.allowForcePush": false,
-  "C_Cpp.errorSquiggles": "disabled"
+  "C_Cpp.errorSquiggles": "disabled",
+  "Codegeex.Comment.LanguagePreference": "中文",
+  "Codegeex.Chat.LanguagePreference": "中文",
+  "Codegeex.SidebarUI.LanguagePreference": "中文",
+  "Codegeex.CompletionModel": "CodeGeeX Pro[Beta]",
+  "Codegeex.Privacy": true,
+  "java.debug.settings.onBuildFailureProceed": true
 }

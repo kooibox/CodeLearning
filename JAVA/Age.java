@@ -5,6 +5,7 @@ public class Age {
         final int MINOR = 35;
 
         System.out.print("请输入你的年龄:");
+        @SuppressWarnings("resource")
         Scanner in = new Scanner(System.in);
 
         int age = in.nextInt();

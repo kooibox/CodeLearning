@@ -2,6 +2,139 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "NumComp",
+            "request": "launch",
+            "mainClass": "PTA.NumComp",
+            "projectName": "code_72e5cfe6"
+        },
+        {
+            "type": "java",
+            "name": "FxFunc",
+            "request": "launch",
+            "mainClass": "PTA.FxFunc",
+            "projectName": "code_72e5cfe6"
+        },
+        {
+            "type": "java",
+            "name": "KvCost",
+            "request": "launch",
+            "mainClass": "PTA.KvCost",
+            "projectName": "code_72e5cfe6"
+        },
+        {
+            "type": "java",
+            "name": "Num152",
+            "request": "launch",
+            "mainClass": "PTA.Num152",
+            "projectName": "code_72e5cfe6"
+        },
+        {
+            "type": "java",
+            "name": "Height",
+            "request": "launch",
+            "mainClass": "PTA.Height",
+            "projectName": "code_72e5cfe6"
+        },
+        {
+            "type": "java",
+            "name": "XY",
+            "request": "launch",
+            "mainClass": "PTA.XY",
+            "projectName": "code_72e5cfe6"
+        },
+        {
+            "type": "java",
+            "name": "Celsius",
+            "request": "launch",
+            "mainClass": "PTA.Celsius",
+            "projectName": "code_72e5cfe6"
+        },
+        {
+            "type": "java",
+            "name": "Triangle",
+            "request": "launch",
+            "mainClass": "PTA.Triangle",
+            "projectName": "code_72e5cfe6"
+        },
+        {
+            "type": "java",
+            "name": "IfTest1",
+            "request": "launch",
+            "mainClass": "IfTest1",
+            "projectName": "code_72e5cfe6"
+        },
+        {
+            "type": "java",
+            "name": "IfElse",
+            "request": "launch",
+            "mainClass": "IfElse",
+            "projectName": "code_72e5cfe6"
+        },
+        {
+            "type": "java",
+            "name": "pay",
+            "request": "launch",
+            "mainClass": "pay",
+            "projectName": "code_72e5cfe6"
+        },
+        {
+            "type": "java",
+            "name": "Iftest",
+            "request": "launch",
+            "mainClass": "Iftest",
+            "projectName": "code_72e5cfe6"
+        },
+        {
+            "type": "java",
+            "name": "AvgNumber",
+            "request": "launch",
+            "mainClass": "AvgNumber",
+            "projectName": "code_72e5cfe6"
+        },
+        {
+            "type": "java",
+            "name": "SanYuanTest",
+            "request": "launch",
+            "mainClass": "SanYuanTest",
+            "projectName": "code_72e5cfe6"
+        },
+        {
+            "type": "java",
+            "name": "Aridest",
+            "request": "launch",
+            "mainClass": "Aridest",
+            "projectName": "code_72e5cfe6"
+        },
+        {
+            "type": "java",
+            "name": "Arttest",
+            "request": "launch",
+            "mainClass": "Arttest",
+            "projectName": "code_72e5cfe6"
+        },
+        {
+            "type": "java",
+            "name": "Artiest",
+            "request": "launch",
+            "mainClass": "Artiest",
+            "projectName": "code_72e5cfe6"
+        },
+        {
+            "type": "java",
+            "name": "Aritest",
+            "request": "launch",
+            "mainClass": "Aritest",
+            "projectName": "code_72e5cfe6"
+        },
+        {
+            "type": "java",
+            "name": "Age",
+            "request": "launch",
+            "mainClass": "Age",
+            "projectName": "code_72e5cfe6"
+        },
+        {
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
@@ -55,7 +188,7 @@
             "runtimeArgs": [
                 "--remote-debugging-port=9222"
             ],
-            "url": "c:\\Users\\gan27\\.vscode\\extensions\\ms-edgedevtools.vscode-edge-devtools-2.1.5\\out\\startpage\\index.html", // Provide your project's url to finish configuring
+            "url": "c:\\Users\\gan27\\.vscode\\extensions\\ms-edgedevtools.vscode-edge-devtools-2.1.5\\out\\startpage\\index.html",
             "presentation": {
                 "hidden": true
             }
@@ -68,7 +201,7 @@
                 "--headless",
                 "--remote-debugging-port=9222"
             ],
-            "url": "c:\\Users\\gan27\\.vscode\\extensions\\ms-edgedevtools.vscode-edge-devtools-2.1.5\\out\\startpage\\index.html", // Provide your project's url to finish configuring
+            "url": "c:\\Users\\gan27\\.vscode\\extensions\\ms-edgedevtools.vscode-edge-devtools-2.1.5\\out\\startpage\\index.html",
             "presentation": {
                 "hidden": true
             }
@@ -77,7 +210,7 @@
             "type": "vscode-edge-devtools.debug",
             "name": "Open Edge DevTools",
             "request": "attach",
-            "url": "c:\\Users\\gan27\\.vscode\\extensions\\ms-edgedevtools.vscode-edge-devtools-2.1.5\\out\\startpage\\index.html", // Provide your project's url to finish configuring
+            "url": "c:\\Users\\gan27\\.vscode\\extensions\\ms-edgedevtools.vscode-edge-devtools-2.1.5\\out\\startpage\\index.html",
             "presentation": {
                 "hidden": true
             }

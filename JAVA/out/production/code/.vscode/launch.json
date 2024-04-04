@@ -6,13 +6,6 @@
     "configurations": [
         {
             "type": "java",
-            "name": "IfElse1",
-            "request": "launch",
-            "mainClass": "IfElse1",
-            "projectName": "JAVA_5a9722ab"
-        },
-        {
-            "type": "java",
             "name": "Person$Test",
             "request": "launch",
             "mainClass": "Person$Test",
