@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "DogAge",
+            "request": "launch",
+            "mainClass": "DogAge",
+            "projectName": "JAVA_5a9722ab"
+        },
+        {
+            "type": "java",
             "name": "IfElse1",
             "request": "launch",
             "mainClass": "IfElse1",

@@ -1,3 +1,4 @@
+package BaseGammerLearning;
 public class Artiest {
     public static void main(String[] args) {
         //定义一个布尔变量b1，值为true

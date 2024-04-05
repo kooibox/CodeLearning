@@ -1,3 +1,4 @@
+package BaseGammerLearning;
 import java.util.Scanner;
 /**
  * @author:禅意剑心相思骨 
